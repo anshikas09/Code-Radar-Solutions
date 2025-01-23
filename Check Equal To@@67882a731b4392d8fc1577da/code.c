@@ -3,10 +3,10 @@ int main() {
     int num1,num2;
     scanf("%d %d",&num1,&num2);
     if (num1==num2){
-        printf("True");
+        printf("True\n");
     }
     else{
-        printf("False");
+        printf("False\n");
     }
     return 0;
 }
