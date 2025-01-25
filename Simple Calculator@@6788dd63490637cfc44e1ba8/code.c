@@ -2,7 +2,7 @@
 int main() {
     int n1,n2;
     char so;
-    scanf("%d %d %d",&n1,&n2,&so);
+    scanf("%d %d %c",&n1,&n2,&so);
     switch(so){
         case '+': printf("%d",n1+n2); break;
         case '-': printf("%d",n1-n2); break;
