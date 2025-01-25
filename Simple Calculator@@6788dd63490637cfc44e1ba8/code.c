@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main() {
-    int  n1,n2;
+    int n1,n2;
     char so;
     scanf("%d %d %d",&n1,&n2,&so);
     switch(so){
