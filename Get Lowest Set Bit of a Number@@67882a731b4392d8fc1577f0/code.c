@@ -6,12 +6,11 @@ int main() {
         printf("0");
         return 0;
     }
-    else{
-        while((num&1)==0){
-            num>>=1;
-            positon++; 
+    while((num&1)==0)
+    {
+        num>>=1;
+        positon++; 
         }
         printf("1");
-    }
     return 0;
 }
