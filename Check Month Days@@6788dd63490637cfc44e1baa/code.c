@@ -4,7 +4,7 @@ int main() {
     scanf("%d",&month);
     switch(month){
         case 1: printf("31"); break;
-        case 2:printf("2"); break;
+        case 2:printf("28"); break;
         case 3:printf("31"); break;
         case 4:printf("30"); break;
         case 5:printf("31"); break;
@@ -16,5 +16,4 @@ int main() {
         case 11:printf("30");break;
         case 12:printf("31"); break;
         default:printf("Invalid month");
-    }return 0;
-}
+    }return 0;}
