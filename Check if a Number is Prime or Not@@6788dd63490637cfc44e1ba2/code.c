@@ -8,7 +8,7 @@ int main() {
             break;
         }
     }
-    if(isprime && n>1){printf("Prime");}
+    if(isprime>1 && n>1){printf("Prime");}
     else{printf("Not Prime");}
     return 0;
 }
