@@ -2,7 +2,7 @@
 int main() {
     int n1,n2;
     scanf("%d %d"&n1,&n2);
-    if(n1%n2==0){printf("Yes");}
+    if(n1%10==n2){printf("Yes");}
     else{printf("No");}
     return 0;
 }
