@@ -6,13 +6,6 @@ int main(){
         printf("0");
         return 0;
     }
-    for(int i=0;num>0;i++){
-        if(num&1){
-            position=i;
-            break;
-        }
-        num>>=1;
-    }
-    printf("1");
+    printf("%d\n",__builtin_ctz(num));
     return 0;
 }
