@@ -7,7 +7,7 @@ int main() {
         case '+': printf("%d",n1+n2); break;
         case '-': printf("%d",n1-n2); break;
         case '*': printf("%d",n1*n2); break;
-        case '/': if(n2!=0){printf("%d",n1/n2);} else{printf("\n");}  break;
+        case '/': printf("%d",n1/n2); break;
         default: printf("\n");
     }
     return 0;
