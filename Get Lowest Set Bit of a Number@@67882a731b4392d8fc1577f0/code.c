@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-    int num,position=-;
+    int num,position=-1;
     scanf("%d",&num);
     if(num==0){
         printf("0");
@@ -13,7 +13,6 @@ int main(){
         }
         num>>=1;
     }
-
     printf("1");
     return 0;
 }
