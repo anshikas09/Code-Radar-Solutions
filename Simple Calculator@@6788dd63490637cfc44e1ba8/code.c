@@ -3,6 +3,12 @@ int main() {
     int n1,n2;
     char so;
     scanf("%d %d %c",&n1,&n2,&so);
-    printf("%d",n1(so)n2);
+    switch(so){
+        case '+':printf("%d",n1+n2); break;
+        case '-':printf("%d",n1-n2); break;
+        case '*':printf("%d",n1*n2); break;
+        case '/':if(n2!=0){printf("%d",n1/n2)} else{printf("Error");} break;
+        default: printf("Invalid");
+    }
     return 0;
 }
