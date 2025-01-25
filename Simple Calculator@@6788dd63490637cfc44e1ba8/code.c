@@ -4,10 +4,10 @@ int main() {
     char so;
     scanf("%f %f %c",&n1,&n2,&so);
     switch(so){
-        case '+': printf("%f",n1+n2); break;
-        case '-': printf("%f",n1-n2); break;
-        case '*': printf("%f",n1*n2); break;
-        case '/': if(n2!=0){printf("%f",n1/n2);} else{printf("\n");} break;
+        case '+': printf("%.0f",n1+n2); break;
+        case '-': printf("%.0f",n1-n2); break;
+        case '*': printf("%.0f",n1*n2); break;
+        case '/': if(n2!=0){printf("%.0f",n1/n2);} else{printf("\n");} break;
         default: printf("\n");
     }
     return 0;
