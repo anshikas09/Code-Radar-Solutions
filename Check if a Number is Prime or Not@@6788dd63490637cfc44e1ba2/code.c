@@ -9,6 +9,7 @@ int main() {
         }
     }
     if(isprime>1 && num>1){printf("Prime");}
+    else if(num==2){printf("Prime");}
     else{printf("Not Prime");}
     return 0;
 }
