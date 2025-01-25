@@ -6,8 +6,8 @@ int main() {
     switch(so){
         case '+': printf("%.0f",n1+n2); break;
         case '-': printf("%.0f",n1-n2); break;
-        case '*': printf("%.0f",n1*n2); break;
-        case '/': if(n2!=0){printf("%.2f",n1/n2);} else{printf("\n");} break;
+        case '*': printf("%.2f",n1*n2); break;
+        case '/': if(n2!=0){printf("%.0f",n1/n2);} else{printf("\n");} break;
         default: printf("\n");
     }
     return 0;
