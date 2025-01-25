@@ -2,7 +2,7 @@
 int main() {
     unsigned int num;
     scanf("%u",&num);
-    unsigned int flip= ~num;
-    printf("%u\n",&flip);
+    int flip= ~num;
+    printf("%d\n",&flip);
     return 0;
 }
