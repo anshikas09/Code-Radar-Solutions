@@ -1,14 +1,14 @@
 #include <stdio.h>
 int main() {
-    int angle1,angle2,angle3;
-    scanf("%d %d %d",&angle1,&angle2,&angle3);
-    int sum=0;
-    sum=angle1+angle2+angle3;
-    if(sum==180 && angle1>0 && angle2>0 && angle3>0){
-        printf("Valid");
-    }
-    else{
-        printf("Invalid");
-    }
+    int s1,s2,s3;
+    scanf("%d %d %d",&s1,&s2,&s3);
+    if((s1+s2)>s3){
+        if((s2+s3)>s1){
+            if((s1+s3)>s2){
+                printf("Valid");
+            }
+            else{ printf("Invalid");}
+        } else{printf("Invalid");}
+    }else{printf("Invalid");}
     return 0;
 }
