@@ -6,7 +6,7 @@ int main() {
         for(int j=1;j<=N;j++){
             if(i==1 || i==N || j==1 || j==N){
                 printf("*");
-                printf("\n");
+                
             }else{printf(" ");}
         }
     }
