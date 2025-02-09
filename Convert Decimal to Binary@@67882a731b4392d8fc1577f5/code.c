@@ -10,7 +10,7 @@ int main(){
     while(num>0){
         printf("%d",num%2);
         num/=2;
-        if(bit==1||flag){
+        if(int bit==1||flag){
             printf("%d",bit);
             flag=1;
         }
