@@ -6,9 +6,9 @@ int main(){
     if(num==0){
         printf("0");
     }
-    int flag=1, bit=0;
+    int flag=1;
     while(num>0){
-        bit=num%2;
+        int bit=num%2;
         num/=2;
         if(bit==1||!flag){
             printf("%d",bit);
