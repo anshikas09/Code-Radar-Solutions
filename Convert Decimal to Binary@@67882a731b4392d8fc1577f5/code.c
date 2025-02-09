@@ -6,16 +6,16 @@ int main(){
     if(num==0){
         printf("0");
     }
-    int flag=0;
+    int result=0,count=0;
     while(num>0){
-        int bit=num%2;
-        if(bit==1){
-            flag=1;
-        }
-        if(flag){
-            printf("%d",bit);
-        }
+        result=result*10+(num%2);
         num=num/2;
+        count++;
+    }
+    while(count>0){
+        printf("%d",result%10);
+        result=result10;
+        count--;
     }
     printf("\n");
     return 0;
