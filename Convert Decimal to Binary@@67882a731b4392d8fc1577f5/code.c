@@ -6,13 +6,13 @@ int main(){
     if(num==0){
         printf("0");
     }
-    int flag=0, bit=0;
+    int flag=1, bit=0;
     while(num>0){
         bit=num%2;
         num/=2;
-        if(bit==1||flag){
+        if(bit==1||!flag){
             printf("%d",bit);
-            flag=1;
+            flag=0;
         }
     }
     printf("\n");
