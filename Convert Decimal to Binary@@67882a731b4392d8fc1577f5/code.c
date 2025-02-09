@@ -15,7 +15,7 @@ int main(){
     }
     while(count>0){
         printf("%d",result%10);
-        result=result10;
+        result=result/10;
         count--;
     }
     printf("\n");
