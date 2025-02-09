@@ -6,14 +6,9 @@ int main(){
     if(num==0){
         printf("0");
     }
-    else{
-        for(int i=31;i>=0;i--){
-            int bit=(num>>i)&1;
-            if(bit==1||started){
-                printf("%d",bit);
-                started=1;
-            }
-        }
+    while(num>0){
+        printf("%d",num%2);
+        num=num/2;
     }
     printf("\n");
     return 0;
