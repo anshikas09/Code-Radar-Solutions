@@ -6,7 +6,8 @@ int main(){
     if(num==0){
         printf("0");
     }
-    int result=0,count=0;
+    int result=0;
+    int count=0;
     while(num>0){
         result=result*10+(num%2);
         num=num/2;
