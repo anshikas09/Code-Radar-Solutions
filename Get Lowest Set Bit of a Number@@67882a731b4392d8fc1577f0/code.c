@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-    int num,position=-1;
+    int num;
     scanf("%d",&num);
     if(num==0){
         printf("0");
