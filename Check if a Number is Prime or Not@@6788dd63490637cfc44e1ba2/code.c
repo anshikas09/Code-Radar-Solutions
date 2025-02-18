@@ -2,7 +2,7 @@
 int main() {
     int num,isprime=0;
     scanf("%d",&num);
-    for(int i=2;i<=num/2;i++){
+    for(int i=2;i<num;i++){
         if(num%i==0){
             isprime++;
             break;
