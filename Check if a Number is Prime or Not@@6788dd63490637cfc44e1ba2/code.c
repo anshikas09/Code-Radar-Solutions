@@ -4,11 +4,9 @@ int main() {
     scanf("%d",&num);
     for(int i=2;i<num;i++){
         if(num%i==0){
-            isprime++;
-            break;
+            printf("Not Prime");
         }
     }
-    if(isprime==0 && num>1){printf("Prime");}
-    else{printf("Not Prime");}
+    printf("Prime");
     return 0;
 }
