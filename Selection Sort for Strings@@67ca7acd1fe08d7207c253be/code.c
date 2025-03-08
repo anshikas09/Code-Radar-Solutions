@@ -6,9 +6,9 @@ void selectionSort(char arr[][100],int n){
             if(strcmp(arr[j],arr[minIndex])<0){minIndex=j;}
         }
         if(minIndex!=i){
-            temp=arr[i];
-            arr[i]=arr[minIndex];
-            arr[minIndex]=temp;}}}
+            strcpy(temp,arr[i]);
+            strcpy(arr[i],arr[minIndex]);
+            strcpy(arr[minIndex],temp);}}}
 void printArray(char arr[][100],int n){
     for(int i=0;i<n;i++){
         printf("%s ",arr[i]);}
