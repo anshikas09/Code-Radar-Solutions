@@ -9,7 +9,7 @@ int main() {
             printf(" ");
         }
         for (int j = 1; j <= i; j++) {
-            printf(" %d", j);  // Print the current number 
+            printf("%d", j);  // Print the current number 
         }
         printf("\n");  // Newline after each row
     }
