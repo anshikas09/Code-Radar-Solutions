@@ -29,9 +29,9 @@ int findUnsortedSubarray(int nums[],int n){
     // while(left>0 && nums[left-1]>subarray_min){left--;}
     // while(right<n-1 && nums[right+1]<subarray_max){right++;}
     // return right-left+1;
-
+    int count=0;
     for(int i=left;i<=right;i++){
-        int count++ ;
+        count++ ;
     }
     return count;
 }
