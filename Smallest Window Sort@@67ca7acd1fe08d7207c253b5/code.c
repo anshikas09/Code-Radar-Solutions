@@ -32,7 +32,7 @@ int findUnsortedSubarray(int nums[],int n){
     int count=0;
     for(int i=left;i<=right;i++){
         if(nums[left]==nums[left+1]){
-            continue;
+            count++;
         }else{
             count++;
         }
