@@ -16,18 +16,22 @@ int findUnsortedSubarray(int nums[],int n){
             break;
         }
     }
-    int subarray_min= INT_MAX;
-    int subarray_max= INT_MIN;
-    for(int i=left;i<=right;i++){
-        if(nums[i]<subarray_min){
-            subarray_min=nums[i];
-        }
-        if(nums[i]>subarray_max){
-            subarray_max=nums[i];
-        }
-    }
-    while(left>0 && nums[left-1]>subarray_min){left--;}
-    while(right<n-1 && nums[right+1]<subarray_max){right++;}
-    return right-left+1;
+    // int subarray_min= INT_MAX;
+    // int subarray_max= INT_MIN;
+    // for(int i=left;i<=right;i++){
+    //     if(nums[i]<subarray_min){
+    //         subarray_min=nums[i];
+    //     }
+    //     if(nums[i]>subarray_max){
+    //         subarray_max=nums[i];
+    //     }
+    // }
+    // while(left>0 && nums[left-1]>subarray_min){left--;}
+    // while(right<n-1 && nums[right+1]<subarray_max){right++;}
+    // return right-left+1;
 
+    for(int i=left;i<=right;i++){
+        int count++;
+    }
+    return count;
 }
