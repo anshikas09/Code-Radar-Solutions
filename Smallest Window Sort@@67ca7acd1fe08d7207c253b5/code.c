@@ -31,7 +31,7 @@ int findUnsortedSubarray(int nums[],int n){
     // return right-left+1;
 
     for(int i=left;i<=right;i++){
-        int count++;
+        int count++ ;
     }
     return count;
 }
