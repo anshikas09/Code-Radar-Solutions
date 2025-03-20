@@ -1,5 +1,6 @@
 #include<stdio.h>
 void insertionSort(char arr[],int n){
+    int j;
     for(int i=1;i<n;i++){
         char key=arr[i];
         j=i-1;
