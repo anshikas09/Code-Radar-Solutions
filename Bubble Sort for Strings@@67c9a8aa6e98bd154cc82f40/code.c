@@ -11,7 +11,7 @@ void bubbleSort(char arr[][100], int n) {
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
                 }}}}
-void printArray(char* arr[],int n){
+void printArray(char arr[][100],int n){
     for(int i=0;i<n;i++){
         printf("%s\n",arr[i]);
     }}
