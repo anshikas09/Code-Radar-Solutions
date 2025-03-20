@@ -6,10 +6,10 @@ void insertionSort(char arr[][100],int n){
         char* key =arr[i];
         j=i-1;
         while(j>=0 && strcmp(arr[j],key)>0){
-            arr[j+1]=arr[j];
-            j--;
+            arr[j+1] =arr[j];
+            j--; 
         }
-        arr[j+1]=key;
+        arr[j+1] =key;
     }
 }
 void printArray(char arr[][100],int n){
