@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include<ctype.h>
 #include<string.h>
-void caesarCipher(char* message,int shift,char* encrypted){
+void caesarCipher(char message[],int shift,char encrypted[]){
     for(int i=0;message[i]!='\0';i++){
         char ch=message[i];
         if(isalpha(ch)){
