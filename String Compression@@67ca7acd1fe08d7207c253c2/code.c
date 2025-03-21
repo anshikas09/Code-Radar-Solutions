@@ -1,12 +1,16 @@
 #include <stdio.h>
 #include <string.h>
+
 void compressString(char str[], char compressed[]) {
     int n = strlen(str);
     if (n < 2) {
         strcpy(compressed, str); // Just copy the original string
-        return;}
+        return;
+    }
+    
     int compressedIndex = 0;  // To track the position in the compressed string
     int count = 1;  // To count the occurrences of each character
+    
     for (int i = 1; i < n; i++) {
         if (str[i] == str[i - 1]) {
             count++;  // Increment count for the same character
