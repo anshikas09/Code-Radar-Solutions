@@ -14,5 +14,5 @@ int findOccurence(int arr[],int n,int target,char mode){
         }else if(arr[mid]>target){
             right=mid-1;
         }else{
-            lef=mid+1;}}
+            left=mid+1;}}
     return result;}
