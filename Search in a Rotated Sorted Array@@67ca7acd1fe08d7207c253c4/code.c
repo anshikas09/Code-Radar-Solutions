@@ -10,10 +10,9 @@ int searchInRotateArray(char arr[],int n,int target){
                 right=mid-1;
             }else{left=mid+1;}
         }else{
-            if(arr[mid]<k && k<=arr[right]){
+            if(arr[mid]<target && target<=arr[right]){
                 left=mid+1;
             }else{right=mid-1;}
-        
         }
     }return -1;
 }
