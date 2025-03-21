@@ -16,7 +16,7 @@ void compressString(char str[], char compressed[]) {
             if (count > 1) {
                 // Add the count as digits to the compressed string
                 char countStr[10]; // Temporary buffer to hold the count as string
-                printf(countStr, "%d", count);
+                sprintf(countStr, "%d", count);
                 int j = 0;
                 while (countStr[j] != '\0') {
                     compressed[compressedIndex++] = countStr[j];
@@ -32,7 +32,7 @@ void compressString(char str[], char compressed[]) {
     if (count > 1) {
         // Add the count as digits to the compressed string
         char countStr[10]; // Temporary buffer to hold the count as string
-        printf(countStr, "%d", count);
+        sprintf(countStr, "%d", count);
         int j = 0;
         while (countStr[j] != '\0') {
             compressed[compressedIndex++] = countStr[j];
