@@ -15,7 +15,5 @@ int findOccurrence(int arr[],int n,int target,char mode){
             right=mid-1;
         }else{
             left=mid+1;}}
-            if(result!=-1){
-                printf("-1");
-            }
+    return result;
     }
