@@ -4,7 +4,7 @@ int findOccurrence(int arr[],int n,int target,char mode){
     int result=-1;
     while(left<=right){
         int mid=left+(right-left)/2;
-        if(arr[mid==target]){
+        if(arr[mid]==target){
             result=mid;
             if(mode=='F'){
                 right=mid-1;
@@ -15,4 +15,7 @@ int findOccurrence(int arr[],int n,int target,char mode){
             right=mid-1;
         }else{
             left=mid+1;}}
-    return result;}
+            if(result!=-1){
+                printf("-1");
+            }
+    }
