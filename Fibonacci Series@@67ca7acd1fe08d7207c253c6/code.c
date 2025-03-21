@@ -1,6 +1,6 @@
 #include <stdio.h>
 // Function to print Fibonacci series up to n
-void fibonacci(int n) {
+void fibonacciSeries(int n) {
     int a = 0, b = 1;
 
     // Print Fibonacci numbers up to n
