@@ -6,7 +6,7 @@ void MaxandMin(int arr[],int n){
             max=arr[i];
         }
         if(arr[i]>arr[i+1]){
-            min=arr[i+1];
+            min=arr[i-1];
         }
     }
     printf("%d ",min);
