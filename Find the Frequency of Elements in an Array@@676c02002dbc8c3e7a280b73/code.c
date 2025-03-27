@@ -1,10 +1,17 @@
 #include<stdio.h>
 void Countfrequency(int arr[],int n){
-    int i,count=1;
+    int visited[n];
     for(int i=0;i<n;i++){
-        for(int j=1;j<n-i-1;j++){
+        if(visited[i]==1){
+            continue;
+        }
+    
+    int count=1;
+    
+        for(int j=i+1;j<n;j++){
             if(arr[i]==arr[j]){
                 count++;
+                visited[j]=1;
             }
         }
         
@@ -17,6 +24,10 @@ int main(){
     int arr[n];
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
+    }
+    int visited[n];
+    for(int i=0;i<n;i++){
+        visited[i]=0;
     }
     Countfrequency(arr,n);
     return 0;
