@@ -1,7 +1,7 @@
 #include<stdio.h>
 void MaxandMin(int arr[],int n){
-    int max=0;
-    int min=0;
+    int max=arr[0];
+    int min=arr[0];
     for(int i=0;i<n;i++){
         if(arr[i]<arr[i+1]){
             max=arr[i];
