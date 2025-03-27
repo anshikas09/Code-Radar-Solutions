@@ -9,8 +9,8 @@ void CountEvenOdd(int arr[],int n){
             co++;
         }
     }
-    printf("%d",ce);
-    printf("%d",co);
+    printf("%d ",ce);
+    printf("%d ",co);
 }
 int main(){
     int n;
