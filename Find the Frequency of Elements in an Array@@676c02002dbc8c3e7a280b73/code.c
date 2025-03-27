@@ -6,8 +6,9 @@ void Countfrequency(int arr[],int n){
             if(arr[i]==arr[j]){
                 count++;
             }
+            printf("%d %d\n",arr[i],count);
         }
-        printf("%d %d\n",arr[i],count);
+        
     }
 }
 int main(){
