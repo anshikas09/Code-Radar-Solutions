@@ -1,4 +1,4 @@
-#include<stdo.h>
+#include<stdio.h>
 void checkSort(int arr[],int n){
     for(int i=0;i<n;i++){
         if(arr[i]<arr[i+1]){
