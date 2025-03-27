@@ -3,10 +3,10 @@ void MaxandMin(int arr[],int n){
     int max,min;
     for(int i=0;i<n;i++){
         if(arr[i]<arr[i+1]){
-            max=arr[i+1];
+            max=arr[i];
         }
         if(arr[i]>arr[i+1]){
-            min=arr[i];
+            min=arr[i+1];
         }
     }
     printf("%d ",min);
