@@ -1,18 +1,26 @@
 #include<stdio.h>
 void SecondLarge(int arr[],int n){
-    int max1,max2;
-    int temp;
-    for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;j++){
-            if(arr[i]<arr[j]){
-                temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
-            }
-        }
-            printf("%d",arr[i]);
+    if(n<=1){
+        printf("-1");
+        return;
     }
-
+    int max1,max2;
+    if(arr[0]>arr[1]){
+        max1=arr[0];
+        max2=arr[1];
+    }if(arr[0]<arr[1]){
+        max1=arr[1];
+        max2=arr[0];
+    }
+    for(int i=2;i<n;i++){
+        if(arr[i]>max1){
+            max2=max1;
+            max1=arr[i];
+        }else if(arr[i]>max2 && arr[i]<max1){
+            max2=arr[i];
+        }
+    }
+    printf("%d",max2);
 }
 int main(){
     int n;
