@@ -8,17 +8,12 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
-    int found =0;
     for(int i=0;i<n;i++){
         if(arr[i]==t){
-            printf("%d", i+1);
-            found =1;
-            break;
+            printf("%d", i);
+            return 0;
         }
-        
     }
-    if(!found){
-        printf("-1");
-    }
+    printf("-1");
     return 0;
 }
