@@ -12,10 +12,8 @@ int main(){
         if(arr[i]==t){
             printf("%d",i+1);
             break;
-        }else{
-            continue;
-        }  
-          
+        }
+        
     }
     return 0;
 }
