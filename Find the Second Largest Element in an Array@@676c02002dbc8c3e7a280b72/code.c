@@ -11,7 +11,7 @@ void SecondLarge(int arr[],int n){
             }
         }
     }
-    printf("%d",max2);
+    printf("%d",arr[i]);
 }
 int main(){
     int n;
