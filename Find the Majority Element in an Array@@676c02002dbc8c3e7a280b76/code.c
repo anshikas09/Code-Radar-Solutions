@@ -14,11 +14,11 @@ int main(){
                 count++;
             }
         }
-        if(count>majority){
+        if(count>=majority){
             printf("%d ",arr[i]);
-        }   
-       
+        }  
     }
-    return -1;
+    
+    return 0;
 
 }
