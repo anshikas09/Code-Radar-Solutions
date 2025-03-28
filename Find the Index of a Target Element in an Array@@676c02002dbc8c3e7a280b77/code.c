@@ -13,8 +13,9 @@ int main(){
             printf("%d",i+1);
             break;
         }else{
-            printf("-1");
-        }    
+            continue;
+        }  
+          
     }
     return 0;
 }
