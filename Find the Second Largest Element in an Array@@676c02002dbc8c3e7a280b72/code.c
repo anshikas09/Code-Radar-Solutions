@@ -1,6 +1,9 @@
 #include<stdio.h>
 void SecondLarge(int arr[],int n){
     int max1,max2;
+    if(arr[0]==arr[1]){
+        max2=-1;
+    }
     if(arr[0]>arr[1]){
         max1=arr[0];
         max2=arr[1];
