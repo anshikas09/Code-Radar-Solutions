@@ -62,6 +62,6 @@ int main(){
     for(int i=0;i<n;i++){
         visited[i]=0;
     }
-    Countfrequency(arr,n);
+    Countfre(arr,n);
     return 0;
 }
