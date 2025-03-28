@@ -8,7 +8,7 @@ int main(){
     }
     int majority=n/2;
     for(int i=0;i<n;i++){
-        int count=0;
+        int count=1;
         for(int j=i+1;j<n;j++){
             if(arr[i]==arr[j]){
                 count++;
@@ -18,6 +18,7 @@ int main(){
             printf("%d ",arr[i]);
         }  
     }
-    return -1;
+    
+    return 0;
 
 }
