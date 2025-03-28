@@ -10,12 +10,11 @@ int main(){
     }
     for(int i=0;i<n;i++){
         if(arr[i]==t){
-            printf("%d",i);
+            printf("%d",i+1);
             break;
         }else{
             printf("-1");
-        }
-        
+        }    
     }
     return 0;
 }
