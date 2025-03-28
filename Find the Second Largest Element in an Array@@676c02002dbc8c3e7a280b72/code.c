@@ -14,6 +14,8 @@ void SecondLarge(int arr[],int n){
             max1=arr[i];
         }else if(arr[i]>max2 && arr[i]<max1){
             max2=arr[i];
+        }else{
+            printf(-1);
         }
     }
     printf("%d",max2);
