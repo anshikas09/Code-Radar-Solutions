@@ -10,8 +10,9 @@ void SecondLarge(int arr[],int n){
                 arr[j]=temp;
             }
         }
+            printf("%d",arr[i]);
     }
-    printf("%d",arr[i]);
+
 }
 int main(){
     int n;
