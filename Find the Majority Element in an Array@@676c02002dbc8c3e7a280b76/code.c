@@ -17,9 +17,7 @@ int main(){
         if(count>majority){
             printf("%d ",arr[i]);
         }   
-        else{
-            printf("-1");
-        }
+       
     }
     return 0;
 
