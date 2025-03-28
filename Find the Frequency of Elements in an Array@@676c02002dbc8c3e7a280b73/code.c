@@ -36,6 +36,7 @@
 #include<stdio.h>
 void Countfre(int arr[],int n){
     int visited=-1;
+    int j;
     for(int i=0;i<n;i++){
         int count=1;
         for(int j=i+1;j<n;j++){
@@ -43,9 +44,9 @@ void Countfre(int arr[],int n){
                 count++;
                 arr[j]=visited;
             }
-        }
-        if(arr[j]!=visited){
+             if(arr[j]!=visited){
             arr[i]=count;
+        }
         }
         printf("%d %d ",arr[i],count);
     }
