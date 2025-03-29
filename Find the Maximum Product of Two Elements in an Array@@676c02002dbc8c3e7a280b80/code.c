@@ -26,7 +26,7 @@ int main() {
     }
     int result = findMaxProduct(arr, n);
     if (result != -1) {
-        printf(" %d\n", result);
+        printf("%d\n", result);
     }
 
     return 0;
