@@ -15,7 +15,7 @@ int sumOfDigits(int num) {
 // Function to calculate and print the sum of digits
 void calculateSumOfDigits(int arr[], int n) {
     for (int i = 0; i < n; i++) {
-        printf("%d\n",sumOfDigits(arr[i]));
+        printf("%d ",sumOfDigits(arr[i]));
     }
 }
 
