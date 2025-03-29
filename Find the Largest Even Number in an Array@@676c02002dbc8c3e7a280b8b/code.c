@@ -7,7 +7,7 @@ int main() {
         scanf("%d", &arr[i]);
     }
     int maxEven = -1;
-    int found=0;
+    int foundEven=0;
     // Traverse and find the largest even number
     for (int i = 0; i < n; i++) {
         if (arr[i] % 2 == 0) { // Check if even
