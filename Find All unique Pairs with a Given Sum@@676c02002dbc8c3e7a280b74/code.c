@@ -33,7 +33,7 @@ int main() {
         }
     }
     if (count == 0) {
-        printf(" ");
+        printf("\n");
     }
     
     return 0;
