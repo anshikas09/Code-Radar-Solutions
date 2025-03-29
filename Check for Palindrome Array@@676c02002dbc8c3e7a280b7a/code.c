@@ -7,7 +7,7 @@ int main(){
     scanf("%d",&arr[n]);
     }
     for(i=0,j=n-1;i<j;i++,j--){
-        if(arr[i]!arr[j]){
+        if(arr[i]!=arr[j]){
             printf("NO");
             break;
         }
@@ -15,4 +15,5 @@ int main(){
     if(i>j){
         printf("YES");
     }
+    return 0;
 }
