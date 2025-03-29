@@ -33,7 +33,7 @@ int main() {
         }
     }
     if (count == 0) {
-        printf("No unique pairs found.\n");
+        printf(" ");
     }
     
     return 0;
