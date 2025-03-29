@@ -1,20 +1,26 @@
 #include <stdio.h>
+// Function to count elements greater than k
+int countGreaterThanK(int arr[], int n, int k) {
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > k) {
+            count++;
+        }
+    }
+    return count;
+}
 int main() {
-    int n, x;
+    int n, k;
     scanf("%d", &n);
     int arr[n];
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    scanf("%d", &x);
-    int count = 0;
-    // Traverse and count elements greater than x
-    for (int i = 0; i < n; i++) {
-        if (arr[i] > x) {
-            count++;
-        }
-    }
-    printf("%d\n", x, count);
-
+    scanf("%d", &k);
+    // Call the function
+    int result = countGreaterThanK(arr, n, k);
+    // Display the result
+    printf("%d\n", k, result);
     return 0;
 }
+
