@@ -50,7 +50,7 @@ int main() {
                     }
                 }
                 if (!isDuplicate) {
-                    printf("(%d, %d)\n", arr[i], arr[j]);
+                    printf("%d %d\n", arr[i], arr[j]);
                 }
             }
         }
