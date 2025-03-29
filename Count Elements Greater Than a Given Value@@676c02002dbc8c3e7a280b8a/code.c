@@ -11,7 +11,7 @@ int main() {
     // Count elements greater than k
     for (int i = 0; i < n; i++) {
         if (arr[i] > k) {
-            printf("%d",arr[i]);
+            printf("%d ",arr[i]);
         }
     }
     printf("%d\n",count);
