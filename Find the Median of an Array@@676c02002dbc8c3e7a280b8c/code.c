@@ -10,7 +10,7 @@ void bubbleSort(int arr[], int n) {
                 arr[j+1] = temp;
             }}}}
 // Function to find the median
-double findMedian(int arr[], int n) {
+int findMedian(int arr[], int n) {
     bubbleSort(arr, n);
     if (n % 2 == 1) {
         return arr[n / 2]; // Odd case
@@ -24,8 +24,8 @@ int main() {
     for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-    double median = findMedian(arr, n);
-    printf("%.2lf\n", median);
+    int median = findMedian(arr, n);
+    printf("%d\n", median);
 
     return 0;
 }
