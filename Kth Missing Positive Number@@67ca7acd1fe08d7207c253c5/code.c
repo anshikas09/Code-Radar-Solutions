@@ -12,10 +12,11 @@
 
 int findKthMissing(int arr[],int n,int k){
     for(int i=0;i<n-1;i++){
-        int missc=arr[i]-(i+1);
-        if(missc>=k){
-            return i+k;
+        if(arr[i]<=k){
+            k++;
+        }else{
+            break;
         }
     }
-    return n+k;
+    return k
 }
