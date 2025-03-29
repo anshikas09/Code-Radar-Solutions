@@ -25,7 +25,7 @@ int main() {
         scanf("%d", &arr[i]);
     }
     double median = findMedian(arr, n);
-    printf("Median: %.2lf\n", median);
+    printf("%.2lf\n", median);
 
     return 0;
 }
