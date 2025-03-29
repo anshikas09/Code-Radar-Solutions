@@ -20,8 +20,7 @@ int main() {
     if (index != -1) {
         printf("%d\n", index);
     } else {
-        printf("Element not found\n");
+        printf("-1");
     }
-
     return 0;
 }
