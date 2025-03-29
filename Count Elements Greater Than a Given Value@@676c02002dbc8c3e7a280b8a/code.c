@@ -10,10 +10,10 @@ int main() {
 
     // Count elements greater than k
     for (int i = 0; i < n; i++) {
-        if (arr[i+1] > k) {
-            printf("%d ",arr[i]);
+        if (arr[i] > k) {
+            count++;
         }
     }
     printf("%d\n",count);
-    return 0;
+
 }
