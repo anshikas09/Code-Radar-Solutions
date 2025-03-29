@@ -14,6 +14,6 @@ int main() {
             count++;
         }
     }
-    printf("%d\n", k, count);
+    printf("%d\n",count);
     return 0;
 }
