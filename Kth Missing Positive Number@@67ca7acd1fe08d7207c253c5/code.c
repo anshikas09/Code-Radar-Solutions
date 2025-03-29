@@ -10,13 +10,27 @@
 //     }return arr[n-1]+(k-missing_count);
 // }
 
+// int findKthMissing(int arr[],int n,int k){
+//     for(int i=0;i<n-1;i++){
+//         if(arr[i]<=k){
+//             k++;
+//         }else{
+//             break;
+//         }
+//     }
+//     return k;
+// }
+
 int findKthMissing(int arr[],int n,int k){
-    for(int i=0;i<n-1;i++){
-        if(arr[i]<=k){
-            k++;
+    int low=0,high=n-1;
+    while(low<=high){
+        int mid=(low+high)/2;
+        int miss=arr[mid]-(mid+1);
+        if(miss<k){
+            low=mid+1;
         }else{
-            break;
+            high=mid-1;
         }
     }
-    return k;
+    return k+high+1;
 }
