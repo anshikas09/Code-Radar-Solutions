@@ -16,8 +16,6 @@ int main(){
             printf("YES");
         }
     }
-    if(i>j){
-        printf("YES");
-    }
+    
     return 0;
 }
