@@ -76,9 +76,9 @@ int longestConsecutive(int arr[], int n) {
         }
     }
 
-    // if (currentLen > maxLen) {
-    //     maxLen = currentLen;
-    // }
+    if (currentLen > maxLen) {
+        maxLen = currentLen;
+    }
 
     return maxLen;
 }
