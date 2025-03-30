@@ -20,7 +20,7 @@ int main() {
                 printf("%d %d\n", arr[i], arr[j]);
                 count++;
                 // Break after printing one pair with the same number
-                while (j + 1 < n && arr[j] == arr[j + 1]) {
+                while ( arr[j] == arr[j + 1]) {
                     j++;
                 }
             }
