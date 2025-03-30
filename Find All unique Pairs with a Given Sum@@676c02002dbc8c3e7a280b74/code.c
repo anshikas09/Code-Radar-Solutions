@@ -26,7 +26,7 @@ int main() {
             }
         }
         // Skip further checks if the next number is the same
-        while (i + 1 < n && arr[i] == arr[i + 1]) {
+        while (arr[i] == arr[i + 1]) {
             i++;
         }
     }
