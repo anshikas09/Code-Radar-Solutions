@@ -1,38 +1,24 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-// Comparison function for sorting
-int compare(const void *a, const void *b) {
-    return (*(int *)a - *(int *)b);
-}
-
-// Function to find the smallest missing positive integer using Binary Search
+// Function to find the smallest missing positive integer
 int findSmallestMissingPositive(int arr[], int n) {
-    // Remove negative numbers and sort the positive ones
-    int temp[n], size = 0;
     for (int i = 0; i < n; i++) {
-        if (arr[i] > 0) {
-            temp[size++] = arr[i];
+        // Place arr[i] at its correct position if it is within bounds
+        while (arr[i] > 0 && arr[i] <= n && arr[arr[i] - 1] != arr[i]) {
+            int temp = arr[arr[i] - 1];
+            arr[arr[i] - 1] = arr[i];
+            arr[i] = temp;
         }
     }
-    
-    if (size == 0) return 1; // If no positive numbers, return 1
 
-    // Sort the array
-    qsort(temp, size, sizeof(int), compare);
-
-    // Perform binary search
-    int low = 0, high = size - 1;
-    while (low <= high) {
-        int mid = low + (high - low) / 2;
-
-        if (temp[mid] == mid + 1) {
-            low = mid + 1;
-        } else {
-            high = mid - 1;
+    // Find the first missing positive number
+    for (int i = 0; i < n; i++) {
+        if (arr[i] != i + 1) {
+            return i + 1;
         }
     }
-    return low + 1; // The smallest missing positive integer
+
+    return n + 1;
 }
 
 int main() {
