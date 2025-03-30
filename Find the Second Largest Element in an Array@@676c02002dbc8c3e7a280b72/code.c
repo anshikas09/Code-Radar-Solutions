@@ -1,12 +1,12 @@
 #include<stdio.h>
-
+#include<limits.h>
 void SecondLarge(int arr[], int n) {
     if (n <= 1) {
         printf("-1");
         return;
     }
 
-    int max1 = arr[0], max2 = -100000; // Initialize max2 with a very small value
+    int max1 = INT_MIN, max2=INT_MIN; // Initialize max2 with a very small value
     int allSame = 1; // Flag to check if all elements are the same
 
     for (int i = 1; i < n; i++) {
@@ -22,7 +22,7 @@ void SecondLarge(int arr[], int n) {
         }
     }
 
-    if (allSame || max2 == -100000) {
+    if (allSame || max2 == INT_MIN) {
         printf("-1");
     } else {
         printf("%d", max2);
