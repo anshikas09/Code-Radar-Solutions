@@ -22,7 +22,7 @@ void SecondLarge(int arr[], int n) {
         }
     }
 
-    if (allSame || max2 == INT_MIN) {
+    if (allSame || max2 == -100000) {
         printf("-1");
     } else {
         printf("%d", max2);
