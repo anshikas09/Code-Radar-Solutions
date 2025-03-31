@@ -15,3 +15,4 @@ int searchInRotatedArray(int arr[],int n,int target){
             }else{right=mid-1;}
         }
     }return -1;}
+
