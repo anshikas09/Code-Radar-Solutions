@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include<string.h>
 int main() {
     char str[1000];  // Assuming max input length is 1000 characters
     fgets(str, sizeof(str), stdin);  // Read input including spaces
