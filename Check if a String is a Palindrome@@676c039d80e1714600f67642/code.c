@@ -11,9 +11,9 @@ int main(){
     for(int i=0;i<len;i++){
         result[i]=st[len-1-i];
     }
-    if(result==st){
-        printf("Yes");
+    if(strcmp(result,st)==0){
+        printf("Yes\n");
     }else{
-        printf("No");
+        printf("No\n");
     }return 0;
 }
