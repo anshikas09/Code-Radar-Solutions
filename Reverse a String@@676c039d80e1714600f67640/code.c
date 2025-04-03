@@ -6,7 +6,7 @@ int main(){
     char st[n];
     scanf("%s",st);
     for(int i=0;st[i]!='\0';i++){
-        result[j++]=result[j]+st[i];
+        char result[j++]=result[j]+st[i];
     }
     result[j]='\0';
     printf("%s",result);
