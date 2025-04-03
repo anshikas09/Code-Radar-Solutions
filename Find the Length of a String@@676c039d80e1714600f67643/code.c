@@ -23,8 +23,8 @@ int main() {
         return 0;
     }
 
-    // // If input has words, count all characters including spaces
-    // length = strlen(str);
+    // If input has words, count all characters including spaces
+    length = strlen(str);
     printf("%d\n", length);
 
     return 0;
