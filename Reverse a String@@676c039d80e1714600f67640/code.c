@@ -1,13 +1,18 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+#include <string.h>
+
+int main() {
     int n;
-    int j=0;
-    scanf("%d",&n);
-    char st[n];
-    scanf("%s",st);
-    for(int i=0;st[i]!='\0';i++){
-        char result[j++]=result[j]+st[i];
+    scanf("%d", &n);
+    
+    char st[n + 1]; // +1 for null character
+    scanf("%s", st); // Takes input
+    int len = strlen(st);
+    char result[len + 1]; // Array to store reversed string
+    result[len] = '\0'; // Null terminator
+    for (int i = 0; i < len; i++) {
+        result[i] = st[len - 1 - i]; // Reverse copying
     }
-    result[j]='\0';
-    printf("%s",result);
+    printf("%s\n", result);
+    return 0;
 }
