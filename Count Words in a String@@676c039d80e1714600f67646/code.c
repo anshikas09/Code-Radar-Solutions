@@ -7,7 +7,7 @@ int main() {
     getchar(); // Consume the newline left by scanf
 
     char st[n + 1];
-    fgets(st, sizeof(st), stdin); // Read full line, including spaces
+    fgets(st, sizeof(st), stdin); // Read full line including spaces
 
     // Remove the trailing newline character if present
     st[strcspn(st, "\n")] = '\0';
@@ -17,9 +17,9 @@ int main() {
 
     for (int i = 0; st[i] != '\0'; i++) {
         if (st[i] == ' ') {
-            in_word = 0; // End of a word
+            in_word = 0; // We are outside a word
         } else if (in_word == 0) {
-            count++; // New word starts
+            count++; // A new word starts
             in_word = 1;
         }
     }
