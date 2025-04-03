@@ -8,7 +8,7 @@ int main(){
     int len=strlen(st);
     char result[len+1];
     result[len]='\0';
-    for(int i=;i<len;i++){
+    for(int i=0;i<len;i++){
         result[i]=st[len-1-i];
     }
     if(result==st){
