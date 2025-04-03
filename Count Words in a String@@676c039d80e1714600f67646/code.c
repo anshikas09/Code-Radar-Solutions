@@ -2,14 +2,10 @@
 #include <string.h>
 
 int main() {
-    int n;
-    scanf("%d", &n);
-    getchar(); // Consume the newline left by scanf
-
-    char st[n + 1];
+    char st[1000];  // Assuming max input length is 1000 characters
     fgets(st, sizeof(st), stdin); // Read full line including spaces
 
-    // Remove the trailing newline character if present
+    // Remove trailing newline character if present
     st[strcspn(st, "\n")] = '\0';
 
     int count = 0;
@@ -19,11 +15,12 @@ int main() {
         if (st[i] == ' ') {
             in_word = 0; // We are outside a word
         } else if (in_word == 0) {
-            count++; // A new word starts
+            count++; // New word detected
             in_word = 1;
         }
     }
 
-    printf("%d\n", count); // Print the word count
+    printf("%d\n", count); // Print word count
     return 0;
 }
+
