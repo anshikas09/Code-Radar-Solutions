@@ -3,12 +3,12 @@
 int main(){
     int n;
     scanf("%d",&n);
-    char str[n+1];
+    char st[n+1];
     scanf("%s",str);
     int len = strlen(st);
     it count=0;
     for(int i=0;i<=len;i++){
-        if(st[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||st[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U'){
+        if(st[i]=='a'||st[i]=='e'||st[i]=='i'||st[i]=='o'||st[i]=='u'||st[i]=='A'||st[i]=='E'||st[i]=='I'||st[i]=='O'||st[i]=='U'){
             count++;
         }
     }
