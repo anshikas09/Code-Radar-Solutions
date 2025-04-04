@@ -2,22 +2,22 @@
 #include <string.h>
 #include <ctype.h>
 
+int isOnlySpaces(char *str) {
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] != ' ') {
+            return 0; // Found non-space character
+        }
+    }
+    return 1; // All spaces
+}
+
 int isBinary(char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] != '0' && str[i] != '1') {
             return 0; // Not binary
         }
     }
-    return 1; // It's binary
-}
-
-int isOnlySpaces(char *str) {
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (!isspace(str[i])) {
-            return 0; // Found a non-space character
-        }
-    }
-    return 1; // All characters are spaces
+    return 1; // All 0s and 1s
 }
 
 int main() {
@@ -26,11 +26,14 @@ int main() {
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0'; // Remove newline
 
-    if (isOnlySpaces(str)) {
-        printf("Yes\n"); // String contains only spaces
+    if (strlen(str) == 0) {
+        printf("No\n"); // Empty string is not valid
+    }
+    else if (isOnlySpaces(str)) {
+        printf("Yes\n");
     }
     else if (isBinary(str)) {
-        printf("Yes\n"); // String is binary (only 0 and 1)
+        printf("Yes\n");
     }
     else {
         printf("No\n");
