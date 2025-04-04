@@ -1,23 +1,27 @@
 #include <stdio.h>
 #include <string.h>
+#define MAX_CHAR 256  // Covers all ASCII characters
 int main() {
-    char str[100];
-    int freq[26] = {0};   // To store frequency of a–z
-    int printed[26] = {0}; // To track if already printed
+    char str[1000];
+    int freq[MAX_CHAR] = {0};    // Frequency of each ASCII character
+    int printed[MAX_CHAR] = {0}; // To avoid printing duplicates
     fgets(str, sizeof(str), stdin);
-    // Count frequency
+    // Remove newline if present
+    str[strcspn(str, "\n")] = '\0';
+    // Count frequency of each character
     for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] >= 'a' && str[i] <= 'z') {
-            freq[str[i] - 'a']++;
-        }}
-    // Print in order of first appearance
+        freq[(unsigned char)str[i]]++;
+    }
+    // Print characters in order of first appearance
     for (int i = 0; str[i] != '\0'; i++) {
-        char ch = str[i];
-        if (ch >= 'a' && ch <= 'z') {
-            int index = ch - 'a';
-            if (!printed[index]) {
-                printf("%c: %d\n", ch, freq[index]);
-                printed[index] = 1;
-            }}}
+        unsigned char ch = str[i];
+        if (!printed[ch]) {
+            if (ch == ' ')
+                printf("'space' = %d\n", freq[ch]);
+            else
+                printf("'%c' = %d\n", ch, freq[ch]);
+            printed[ch] = 1;
+        }
+    }
     return 0;
 }
