@@ -13,7 +13,7 @@ int main() {
     // Print frequencies
     for (int i = 0; i < 26; i++) {
         if (freq[i] > 0) {
-            printf("%c = %d\n", 'a' + i, freq[i]);
+            printf("%c: %d\n", 'a' + i, freq[i]);
         }
     }
     return 0;
