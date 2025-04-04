@@ -32,7 +32,7 @@ int main() {
     if (max_freq == 0) {
         printf("\n");
     } else {
-        printf("%c\n", max_freq);
+        printf("%c\n",most_frequent);
     }
 
     return 0;
