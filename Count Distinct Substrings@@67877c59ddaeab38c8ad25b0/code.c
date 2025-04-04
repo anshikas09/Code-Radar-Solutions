@@ -23,10 +23,9 @@ int countDistinctSubstrings(char *str) {
                 count++;
             }}}
     return count;
-}
+    }
 int main() {
     char str[MAX_LEN];
-    printf("%d\n", MAX_LEN - 1);
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0'; // Remove newline
     int result = countDistinctSubstrings(str);
