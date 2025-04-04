@@ -17,9 +17,9 @@ int main() {
         unsigned char ch = str[i];
         if (!printed[ch]) {
             if (ch == ' ')
-                printf("'space' = %d\n", freq[ch]);
+                printf(" : %d\n", freq[ch]);
             else
-                printf("'%c' = %d\n", ch, freq[ch]);
+                printf("%c: %d\n", ch, freq[ch]);
             printed[ch] = 1;
         }
     }
