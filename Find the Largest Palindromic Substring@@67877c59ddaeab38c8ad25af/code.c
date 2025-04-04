@@ -23,8 +23,7 @@ void findLongestPalindrome(char *str) {
             }}}
     for (int i = start; i < start + maxLength; i++) {
         putchar(str[i]);
-    }
-}
+    }}
 int main() {
     char str[200];
     fgets(str, sizeof(str), stdin);
