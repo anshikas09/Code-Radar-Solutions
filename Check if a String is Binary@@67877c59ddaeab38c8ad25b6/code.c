@@ -1,43 +1,27 @@
 #include <stdio.h>
 #include <string.h>
 
-// Check if string contains only spaces
-int isOnlySpaces(char *str) {
+int isBinaryOrSpaces(char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] != ' ') {
-            return 0; // Found something other than space
+        if (str[i] != '0' && str[i] != '1' && str[i] != ' ') {
+            return 0; // Invalid character found
         }
     }
-    return 1; // All characters are spaces
-}
-
-// Check if string contains only 0s and 1s
-int isBinary(char *str) {
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] != '0' && str[i] != '1') {
-            return 0; // Found non-binary character
-        }
-    }
-    return 1; // All binary
+    return 1; // Only 0, 1, or space
 }
 
 int main() {
     char str[1000];
+
     fgets(str, sizeof(str), stdin);
 
-    // Remove trailing newline from fgets (if there is one)
+    // Remove newline character if present
     str[strcspn(str, "\n")] = '\0';
 
-    // If the string is empty or contains only spaces
-    if (strlen(str) == 0 || isOnlySpaces(str)) {
+    if (isBinaryOrSpaces(str))
         printf("Yes\n");
-    }
-    else if (isBinary(str)) {
-        printf("Yes\n"); // String contains only 0s and 1s
-    }
-    else {
-        printf("No\n"); // Everything else
-    }
+    else
+        printf("No\n");
 
     return 0;
 }
