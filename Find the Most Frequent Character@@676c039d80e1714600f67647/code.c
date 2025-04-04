@@ -6,7 +6,7 @@ int main() {
     char str[1000];
     int freq[26] = {0};  // To count frequency of each lowercase letter a-z
 
-    printf("Enter a string: ");
+    
     fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = '\0';  // Remove newline
 
@@ -30,9 +30,9 @@ int main() {
     }
 
     if (max_freq == 0) {
-        printf("No alphabetic characters found.\n");
+        printf("\n");
     } else {
-        printf("Most frequent character: %c (appears %d times)\n", most_frequent, max_freq);
+        printf("%c\n", max_freq);
     }
 
     return 0;
