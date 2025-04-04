@@ -16,7 +16,7 @@ int main() {
         if (ch >= 'a' && ch <= 'z') {
             int index = ch - 'a';
             if (!printed[index]) {
-                printf("%c = %d\n", ch, freq[index]);
+                printf("%c: %d\n", ch, freq[index]);
                 printed[index] = 1;
             }}}
     return 0;
