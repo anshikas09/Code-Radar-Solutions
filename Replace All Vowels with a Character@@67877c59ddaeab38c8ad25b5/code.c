@@ -1,16 +1,19 @@
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
+int isVowel(char ch) {
+    ch = tolower(ch);
+    return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+}
 int main() {
     char str[1000];
+    char replaceChar;
     fgets(str, sizeof(str), stdin);
+    scanf(" %c", &replaceChar);  // space before %c to skip newline
     for (int i = 0; str[i] != '\0'; i++) {
-        if (isalpha(str[i])) {
-            // Replace letters with '*'
-            putchar('*');
-        } else {
-            // Keep non-letters like space, punctuation
-            putchar(str[i]);
+        if (isVowel(str[i])) {
+            str[i] = replaceChar;
         }
     }
+    printf("%s", str);
     return 0;
 }
