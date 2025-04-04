@@ -12,7 +12,7 @@ int main() {
 
     int length = strlen(str);
 
-    printf("Length of the string is: %d\n", length);
+    printf("%d\n", length);
 
     return 0;
 }
