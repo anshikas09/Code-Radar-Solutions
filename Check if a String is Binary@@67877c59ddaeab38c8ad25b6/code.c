@@ -13,10 +13,14 @@ int isBinaryOrSpaces(char *str) {
 int main() {
     char str[1000];
 
+    printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
 
-    // Remove newline character if present
-    str[strcspn(str, "\n")] = '\0';
+    // Remove newline character from input
+    size_t len = strlen(str);
+    if (len > 0 && str[len - 1] == '\n') {
+        str[len - 1] = '\0';
+    }
 
     if (isBinaryOrSpaces(str))
         printf("Yes\n");
