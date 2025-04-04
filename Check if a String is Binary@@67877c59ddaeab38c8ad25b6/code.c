@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 // Check if string contains only spaces
 int isOnlySpaces(char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
@@ -23,8 +22,6 @@ int isBinary(char *str) {
 
 int main() {
     char str[1000];
-
-    printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
 
     // Remove trailing newline from fgets
