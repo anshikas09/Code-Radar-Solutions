@@ -1,32 +1,57 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
-int isBinaryOrSpaces(char *str) {
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] != '0' && str[i] != '1' && str[i] != ' ') {
-            return 0; // Invalid character found
-        }else if(str[i]==' ') {
-            return 1;
+int is_binary_string(const char* str) {
+    // Loop through the string and check if each character is '0' or '1'
+    for (int i = 0; i < strlen(str); i++) {
+        if (str[i] != '0' && str[i] != '1') {
+            return 0; // Not a binary string
         }
     }
-    return 1; // Only 0, 1, or space
+    return 1; // It's a binary string
+}
+
+int contains_multiple_spaces(const char* str) {
+    int space_count = 0;
+
+    // Check for multiple spaces
+    for (int i = 0; i < strlen(str); i++) {
+        if (str[i] == ' ') {
+            space_count++;
+        }
+    }
+
+    return space_count > 1; // Return true if there are multiple spaces
+}
+
+int contains_single_space(const char* str) {
+    int space_count = 0;
+
+    // Check for single space
+    for (int i = 0; i < strlen(str); i++) {
+        if (str[i] == ' ') {
+            space_count++;
+        }
+    }
+
+    return space_count == 1; // Return true if there's exactly one space
 }
 
 int main() {
-    char str[1000];
+    char str[100];
 
     fgets(str, sizeof(str), stdin);
 
-    // Remove newline character from input
-    size_t len = strlen(str);
-    if (len > 0 && str[len - 1] == '\n') {
-        str[len - 1] = '\0';
-    }
+    // Remove newline character at the end of input string
+    str[strcspn(str, "\n")] = '\0';
 
-    if (isBinaryOrSpaces(str))
+    // Check if the string is binary or contains multiple or single spaces
+    if (is_binary_string(str) || contains_multiple_spaces(str) || contains_single_space(str)) {
         printf("Yes\n");
-    else
+    } else {
         printf("No\n");
+    }
 
     return 0;
 }
