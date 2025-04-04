@@ -1,33 +1,34 @@
 #include <stdio.h>
 #include <string.h>
-#define MAX 1000
-// Function to check if a substring is already present
-int isUnique(char substrings[][MAX], int count, char *newSub) {
+#define MAX_LEN 30     // Max input string length
+#define MAX_SUBS 500   // Max distinct substrings
+// Check if substring is already in the list
+int isUnique(char subs[MAX_SUBS][MAX_LEN], int count, char *newSub) {
     for (int i = 0; i < count; i++) {
-        if (strcmp(substrings[i], newSub) == 0)
-            return 0;  // Not unique
+        if (strcmp(subs[i], newSub) == 0)
+            return 0; // Not unique
     }
-    return 1;  // Unique
+    return 1; // Unique
 }
-// Function to count all distinct substrings
 int countDistinctSubstrings(char *str) {
     int len = strlen(str);
-    char substrings[MAX * MAX][MAX]; // Assuming a maximum number of substrings
+    char subs[MAX_SUBS][MAX_LEN];
     int count = 0;
     for (int i = 0; i < len; i++) {
-        char temp[MAX] = "";
+        char temp[MAX_LEN] = "";
         for (int j = i; j < len; j++) {
-            strncat(temp, &str[j], 1);  // Append one character
-            if (isUnique(substrings, count, temp)) {
-                strcpy(substrings[count], temp);
+            strncat(temp, &str[j], 1); // Add one character
+            if (isUnique(subs, count, temp)) {
+                strcpy(subs[count], temp);
                 count++;
             }}}
     return count;
 }
 int main() {
-    char str[MAX];
+    char str[MAX_LEN];
+    printf("%d\n", MAX_LEN - 1);
     fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0';  // Remove newline
+    str[strcspn(str, "\n")] = '\0'; // Remove newline
     int result = countDistinctSubstrings(str);
     printf("%d\n", result);
     return 0;
