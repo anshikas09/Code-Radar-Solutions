@@ -38,12 +38,11 @@ void reverseWords(char *str) {
 int main() {
     char str[1000];
 
-    printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
 
     reverseWords(str);
 
-    printf("Reversed words: \"%s\"\n", str);
+    printf("%s\n", str);
 
     return 0;
 }
