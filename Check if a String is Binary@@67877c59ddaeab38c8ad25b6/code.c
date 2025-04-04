@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 // Check if string contains only spaces
 int isOnlySpaces(char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
@@ -24,18 +25,15 @@ int main() {
     char str[1000];
     fgets(str, sizeof(str), stdin);
 
-    // Remove trailing newline from fgets
+    // Remove trailing newline from fgets (if there is one)
     str[strcspn(str, "\n")] = '\0';
 
-    // If empty string
-    if (strlen(str) == 0) {
-        printf("No\n");
-    }
-    else if (isOnlySpaces(str)) {
-        printf("Yes\n"); // Only spaces
+    // If the string is empty or contains only spaces
+    if (strlen(str) == 0 || isOnlySpaces(str)) {
+        printf("Yes\n");
     }
     else if (isBinary(str)) {
-        printf("Yes\n"); // Only 0s and 1s
+        printf("Yes\n"); // String contains only 0s and 1s
     }
     else {
         printf("No\n"); // Everything else
