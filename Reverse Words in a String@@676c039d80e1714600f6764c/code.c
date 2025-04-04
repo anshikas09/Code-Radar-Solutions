@@ -17,20 +17,19 @@ void reverseWords(char *str) {
     int len = strlen(str);
 
     // Remove trailing newline if exists (from fgets)
-    if (str[len - 1] == '\n') {
+    if (len > 0 && str[len - 1] == '\n') {
         str[len - 1] = '\0';
-        len--;
+        len--;  // Update length after removing newline
     }
 
     // Step 1: Reverse the entire string
     reverse(str, 0, len - 1);
 
     // Step 2: Reverse each word
-    int start = 0, end;
+    int start = 0;
     for (int i = 0; i <= len; i++) {
         if (str[i] == ' ' || str[i] == '\0') {
-            end = i - 1;
-            reverse(str, start, end);
+            reverse(str, start, i - 1);
             start = i + 1;
         }
     }
@@ -38,11 +37,13 @@ void reverseWords(char *str) {
 
 int main() {
     char str[1000];
+
+    printf("Enter a string: ");
     fgets(str, sizeof(str), stdin);
 
     reverseWords(str);
 
-    printf("%s\n", str);
+    printf("Reversed words: \"%s\"\n", str);
 
     return 0;
 }
