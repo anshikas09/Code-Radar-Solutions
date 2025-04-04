@@ -21,7 +21,6 @@ int main() {
             else
                 printf("%c: %d\n", ch, freq[ch]);
             printed[ch] = 1;
-        }
-    }
+        }}
     return 0;
 }
