@@ -9,20 +9,20 @@ int main() {
     // Remove trailing newline if present
     str[strcspn(str, "\n")] = '\0';
 
-    // Check if the input has at least one non-space character
-    int non_space_found = 0;
+    // Check if all characters are spaces
+    int has_non_space = 0;
     for (int i = 0; str[i] != '\0'; i++) {
-        if (!isspace(str[i])) {
-            non_space_found = 1;
+        if (!isspace((unsigned char)str[i])) {
+            has_non_space = 1;
             break;
         }
     }
 
-    if (!non_space_found) {
-        // Only spaces in input
+    if (!has_non_space) {
+        // Input has only spaces
         printf("0\n");
     } else {
-        // At least one non-space character
+        // Input has at least one non-space character
         printf("%lu\n", strlen(str));
     }
 
