@@ -26,7 +26,7 @@ int main() {
     if (result != '\0') {
         printf("%c\n", result);
     } else {
-        printf("\n");
+        printf("-\n");
     }
     return 0;
 }
