@@ -3,23 +3,27 @@
 #include <ctype.h>
 
 int main() {
-    char str[1000];
-    fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = '\0';  // Remove newline
+    char str[1000];  // Buffer to hold input
+    fgets(str, sizeof(str), stdin);  // Read input including spaces
 
-    // Check if the string contains any non-space character
-    int has_non_space = 0;
+    // Remove trailing newline if present
+    str[strcspn(str, "\n")] = '\0';
+
+    // Check if the input has at least one non-space character
+    int non_space_found = 0;
     for (int i = 0; str[i] != '\0'; i++) {
         if (!isspace(str[i])) {
-            has_non_space = 1;
+            non_space_found = 1;
             break;
         }
     }
 
-    if (!has_non_space) {
-        printf("0\n");  // Only spaces
+    if (!non_space_found) {
+        // Only spaces in input
+        printf("0\n");
     } else {
-        printf("%lu\n", strlen(str));  // Includes letters and spaces
+        // At least one non-space character
+        printf("%lu\n", strlen(str));
     }
 
     return 0;
