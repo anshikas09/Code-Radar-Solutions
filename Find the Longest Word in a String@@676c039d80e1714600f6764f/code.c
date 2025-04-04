@@ -27,7 +27,6 @@ void findLongestWord(char *str) {
     for (int j = maxStart; j < maxStart + maxLen; j++) {
         putchar(str[j]);
     }
-    printf("%d\n", maxLen);
 }
 int main() {
     char str[200];
