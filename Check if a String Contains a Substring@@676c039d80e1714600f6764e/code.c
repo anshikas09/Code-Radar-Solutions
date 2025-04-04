@@ -13,9 +13,9 @@ int main() {
         substr[len2 - 1] = '\0';
     // Use strstr to check for substring
     if (strstr(str, substr) != NULL) {
-        printf("%s\n", substr);
+        printf("Yes\n");
     } else {
-        printf("%s\n", substr);
+        printf("No\n");
     }
     return 0;
 }
