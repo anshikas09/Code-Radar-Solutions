@@ -1,49 +1,36 @@
 #include <stdio.h>
 #include <string.h>
-
-// Helper function to reverse characters in a portion of a string
-void reverse(char *str, int start, int end) {
-    while (start < end) {
-        char tmp = str[start];
-        str[start] = str[end];
-        str[end] = tmp;
-        start++;
-        end--;
+void reverseWords(char str[]) {
+    int start = 0, end = 0, length = strlen(str);
+    // Reverse the entire string first
+    for (int i = 0; i < length / 2; i++) {
+        char temp = str[i];
+        str[i] = str[length - i - 1];
+        str[length - i - 1] = temp;
     }
-}
-
-// Function to reverse words in a string
-void reverseWords(char *str) {
-    int len = strlen(str);
-
-    // Remove trailing newline if it exists
-    if (len > 0 && str[len - 1] == '\n') {
-        str[len - 1] = '\0';
-        len--;  // Update length after removing newline
-    }
-
-    // Step 1: Reverse the whole string
-    reverse(str, 0, len - 1);
-
-    // Step 2: Reverse each word
-    int start = 0;
-    for (int i = 0; i <= len; i++) {
-        if (str[i] == ' ' || str[i] == '\0') {
-            reverse(str, start, i - 1);
-            start = i + 1;
+    // Now reverse each word in the string
+    while (str[end] != '\0') {
+        if (str[end] == ' ' || str[end] == '\0') {
+            int wordEnd = end - 1;
+            while (start < wordEnd) {
+                char temp = str[start];
+                str[start] = str[wordEnd];
+                str[wordEnd] = temp;
+                start++;
+                wordEnd--;
+            }
+            start = end + 1;
         }
+        end++;
     }
 }
-
 int main() {
-    char str[1000];
-
-    printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-
+    char str[100];
+    fgets(str, sizeof(str), stdin);  // Read the string
+    str[strcspn(str, "\n")] = '\0';  // Remove trailing newline if present
     reverseWords(str);
-
-    printf("Reversed words: \"%s\"\n", str);
-
+    printf("%s\n", str);
+    
     return 0;
 }
+
