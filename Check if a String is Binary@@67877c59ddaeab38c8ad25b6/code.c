@@ -40,9 +40,9 @@ int main() {
     else if (isBinary(str)) {
         printf("Yes\n"); // Only 0s and 1s
     }
-    // else {
-    //     printf("No\n"); // Everything else
-    // }
+    else {
+        printf("No\n"); // Everything else
+    }
 
     return 0;
 }
